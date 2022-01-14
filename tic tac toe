@@ -1,0 +1,52 @@
+
+list = [1,2,3,4,5,6,7,8,9]
+
+print(f'{list[0]} | {list[1]} | {list[2]}')
+print('- + - + -')
+print(f'{list[3]} | {list[4]} | {list[5]}')
+print('- + - + -')
+print(f'{list[6]} | {list[7]} | {list[8]}')
+
+start_loop = 0
+while start_loop == 0:
+    x_turn = int(input('X choose your number: '))
+    list[x_turn - 1] = 'X'
+
+    print(f'{list[0]} | {list[1]} | {list[2]}')
+    print('- + - + -')
+    print(f'{list[3]} | {list[4]} | {list[5]}')
+    print('- + - + -')
+    print(f'{list[6]} | {list[7]} | {list[8]}')
+
+    if list[0] == 'X' and list[1] == 'X' and list[2] == 'X' \
+            or list[3] == 'X' and list[4] == 'X' and list[5] == 'X' \
+            or list[6] == 'X' and list[7] == 'X' and list[8] == 'X' \
+            or list[0] == 'X' and list[3] == 'X' and list[6] == 'X' \
+            or list[1] == 'X' and list[4] == 'X' and list[7] == 'X' \
+            or list[2] == 'X' and list[5] == 'X' and list[8] == 'X' \
+            or list[0] == 'X' and list[4] == 'X' and list[8] == 'X' \
+            or list[2] == 'X' and list[4] == 'X' and list[6] == 'X' :
+        start_loop = 1
+        print('X! Congratulation.')
+        break
+
+    o_turn = int(input('O choose your number: '))
+    list[o_turn - 1] = 'O'
+
+    print(f'{list[0]} | {list[1]} | {list[2]}')
+    print('- + - + -')
+    print(f'{list[3]} | {list[4]} | {list[5]}')
+    print('- + - + -')
+    print(f'{list[6]} | {list[7]} | {list[8]}')
+
+    if list[0] == 'O' and list[1] == 'O' and list[2] == 'O' \
+            or list[6] == 'O' and list[7] == 'O' and list[8] == 'O' \
+            or list[0] == 'O' and list[3] == 'O' and list[6] == 'O' \
+            or list[1] == 'O' and list[4] == 'O' and list[7] == 'O' \
+            or list[2] == 'O' and list[5] == 'O' and list[8] == 'O' \
+            or list[0] == 'O' and list[4] == 'O' and list[8] == 'O' \
+            or list[2] == 'O' and list[4] == 'O' and list[6] == 'O' :
+        start_loop = 1
+        print('O! Congratulation.')
+        break
+
